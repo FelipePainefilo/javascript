@@ -1,0 +1,46 @@
+<script>
+
+function maximo_arreglo(arreglo){
+    var maximo;
+    maximo=arreglo[0];
+    for(var i=1;i<arreglo.length;i++){
+        if(maximo<arreglo[i]){
+            maximo= arreglo[i];
+        }
+    }
+    return maximo;
+}
+function minimo_arreglo(arreglo){
+    var minimo;
+    minimo=arreglo[0];
+    for(var i=1;i<arreglo.length;i++){
+        if(minimo>arreglo[i]){
+            minimo= arreglo[i];
+        }
+    }
+    return minimo;
+}
+function promedio(arreglo){
+    var promedio=0;
+    var suma=0;
+    for(var i=0;i<arreglo.length;i++){
+        suma=suma + arreglo[i];
+    }
+    promedio=suma/arreglo.length;
+    return promedio
+}
+function retornarMaxMinAvg(arreglo){
+    var arreglo_modificado=[];
+
+    arreglo_modificado.push(maximo_arreglo(arreglo));
+    arreglo_modificado.push(minimo_arreglo(arreglo));
+    arreglo_modificado.push(promedio(arreglo));
+    
+    return arreglo_modificado;
+}
+var arreglo = [1,5,10,-2];
+console.log(arreglo);
+var a = retornarMaxMinAvg(arreglo);
+console.log(a);
+
+</script>

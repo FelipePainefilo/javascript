@@ -1,0 +1,26 @@
+<script>
+//Imprime (print) el menor, devuelve (return) el mayor - Crea una función que tome un 
+//array de números. La función debería imprimir (print) el menor valor del array, 
+//y devolver (return) el mayor. 
+function menor_array(arreglo){
+    var menor=arreglo[0];
+    var mayor=arreglo[0];
+    
+    for(var i=1;i<arreglo.length;i++){
+        if(menor>arreglo[i]){
+            menor = arreglo[i];
+        }
+
+        if(mayor<arreglo[i]){
+            mayor = arreglo[i];
+        }
+    }
+    console.log(menor);
+    return mayor;
+}
+var arreglo = [1,5,10,-2];
+console.log(arreglo);
+console.log(menor_array(arreglo));
+
+
+</script>

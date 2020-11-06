@@ -1,0 +1,21 @@
+<script>
+
+//Incrementa los Segundos - Dado un array de números arr, agrega 1 a cualquier otro elemento,
+// específicamente a aquellos cuyo índice es impar (arr[1], arr[3], arr[5], etc). 
+//Luego, console.log cada valor del array y devuelve arr. 
+function incSegundos (array){
+    var cambia1=[];
+    for (var i= 0; i< array.length; i++) {
+        if (array[i]%2==0) {
+            cambia1.push (array[i])
+        }else{
+            cambia1.push(1)
+        }        
+    }
+    return cambia1
+}
+
+var z=incSegundos([1,4,0,3,6,4,-5,9,7,3]);
+console.log(z);
+
+</script>

@@ -1,0 +1,36 @@
+<script>
+
+//Pares e Impares - Crea una función que acepte un array. 
+//Cada vez que ese array tenga 3 valores impares seguidos, imprime (print) “¡Qué imparcial!”, 
+//y cada vez que tenga 3 pares seguidos, imprime (print) “¡Es para bien!”.
+
+function paresImpares(array){
+    var impares=0;
+    var pares=0;
+    for (var i = 0; i < array.length; i++){
+        if (array[i]%2==0){
+            pares=pares+1;
+            impares=0;
+            if (pares==3){
+                console.log("¡Es para bien!")
+            }
+            
+        }else{
+            impares=impares+1;
+            pares=0;
+            if (impares==3){
+                console.log("Que imparcial")
+            }
+        }
+        
+    }
+    
+}
+
+
+
+
+z=paresImpares([-1,4,-5,5,1,-3,4,8,6]);
+console.log(z);
+
+</script>

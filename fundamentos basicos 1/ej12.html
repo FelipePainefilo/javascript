@@ -1,0 +1,28 @@
+<script>
+    //Intercambia Valores: Escribe una función que intercambie el primer y el último valor
+    // de cualquier array. La extensión mínima predeterminada del array es 
+    //2 (ej: [1,5,10,-2] será [-2,5,10,1]). 
+
+    function intercambiarValores(arreglo){
+
+            var arreglo_modificado=[];
+            var inicio=arreglo[0];
+            var final = arreglo[arreglo.length-1];
+
+            //copiar arreglo en arreglo_modificado
+            arreglo_modificado = arreglo;
+            //tomar el primer valor de arreglo  y ponerlo al final del arreglo_modificado
+            
+            arreglo_modificado[0] = final;
+            //tomar el ultimo valor de arreglo y ponerlo al inicio del arreglo_modificado
+            arreglo_modificado[arreglo_modificado.length-1] = inicio;
+
+        return arreglo_modificado;
+    }
+
+    var arreglo = [1,5,10,-2];
+    console.log(arreglo);
+    var a = intercambiarValores(arreglo);
+
+    console.log(a);
+</script>
